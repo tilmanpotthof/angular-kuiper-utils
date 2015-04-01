@@ -1,0 +1,23 @@
+{
+  "name": "angular-kuiper-utils",
+  "version": "0.1.0",
+  "homepage": "https://github.com/tilmanpotthof/angular-kuiper-utils",
+  "authors": [
+    "Tilman Potthof <tilmanpotthof@gmail.com>"
+  ],
+  "keywords": [
+    "angular",
+    "utils",
+    "commons",
+    "ui"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "description": "Loose collection reusable high quality components"
+}
