@@ -13,10 +13,38 @@ module.exports = function (grunt) {
           sync: ['author', 'name', 'version', 'homepage', 'keywords']
         }
       }
+    },
+
+    jshint: {
+      src: {
+        options: {
+          jshintrc: '.jshintrc-base'
+        },
+        src: [
+          'src/**/*.js',
+          '!src/**/*.spec.js'
+        ]
+      },
+      ci: {
+        options: {
+          jshintrc: '.jshintrc-base'
+        },
+        src: [
+          '*.js'
+        ]
+      },
+      test: {
+        options: {
+          jshintrc: '.jshintrc'
+        },
+        src: [
+          'src/**/*.spec.js'
+        ]
+      }
     }
   });
 
   grunt.registerTask('pre-build', ['sync', 'deps-ok', 'nice-package']);
   grunt.registerTask('build', ['pre-build']);
   grunt.registerTask('default', ['build']);
-}
+};
