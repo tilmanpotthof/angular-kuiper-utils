@@ -15,3 +15,8 @@
 ## Work in progress
 
 WARNING: This project is in the bootstrapping phase!
+
+## Name
+
+The name is inspired by the [kuiper belt](http://en.wikipedia.org/wiki/Kuiper_belt) a region of the solar system
+beyond the planets.
