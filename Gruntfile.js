@@ -139,6 +139,41 @@ module.exports = function(grunt) {
           'dist/angular-kuiper-utils.min.js': ['.tmp/angular-kuiper-utils.js']
         }
       }
+    },
+    ngdocs: {
+      options: {
+        dest: 'dist/docs',
+        scripts: [
+          'angular.js',
+          '../angular-st-pagination.js',
+          '../demoApp/scripts/exampleData.js'
+        ],
+        sourceLink: 'https://github.com/tilmanpotthof/angular-st-pagination/blob/{{sha}}/{{file}}#L{{codeline}}',
+        editLink: 'https://github.com/tilmanpotthof/angular-st-pagination/edit/master/{{file}}#L{{codeline}}'
+      },
+      all: ['src/**/*.js']
+    },
+    connect: {
+      options: {
+        port: 9000,
+        // Change this to '0.0.0.0' to access the server from outside.
+        hostname: 'localhost',
+        livereload: 35729
+      },
+      docs: {
+        options: {
+          open: 'http://localhost:9000/dist/docs/'
+        }
+      }
+    },
+    watch: {
+      docs: {
+        files: ['src/**/*.js'],
+        tasks: ['ngdocs'],
+        options: {
+          livereload: true
+        }
+      }
     }
   });
 
@@ -147,8 +182,11 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['karma:src']);
 
   grunt.registerTask('pre-build', ['deps', 'style', 'test']);
-  grunt.registerTask('build', ['clean', 'uglify:dist', 'ngAnnotate', 'uglify:min']);
-  grunt.registerTask('post-build', ['karma:dist']);
+  grunt.registerTask('dist', ['clean', 'uglify:dist', 'ngAnnotate', 'uglify:min']);
+  grunt.registerTask('post-build', ['karma:dist', 'ngdocs']);
 
-  grunt.registerTask('default', ['pre-build', 'build', 'post-build']);
+  grunt.registerTask('dev-docs', ['build', 'connect:docs', 'watch:docs']);
+  grunt.registerTask('build', ['pre-build', 'dist', 'post-build']);
+
+  grunt.registerTask('default', ['build']);
 };
