@@ -1,5 +1,5 @@
 /*jshint camelcase:false */
-describe('kuipArrayUtils', function () {
+describe('kuipUtils', function () {
   'use strict';
   beforeEach(module('kuipArrayUtils'));
 
