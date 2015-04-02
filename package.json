@@ -39,9 +39,7 @@
   "pre-commit": [
     "grunt pre-build"
   ],
-  "pre-push": [
-    "./scripts/clean-build.sh"
-  ],
+  "pre-push": [],
   "repository": {
     "type": "git",
     "url": "https://github.com/tilmanpotthof/angular-kuiper-utils.git"
