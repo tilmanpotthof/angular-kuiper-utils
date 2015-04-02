@@ -12,6 +12,20 @@ module.exports = function(config) {
     ],
     autoWatch: false,
     browsers: ['PhantomJS'],
-    singleRun: true
+    singleRun: true,
+    reporters: ['progress', 'coverage'],
+    preprocessors: {
+      'src/!(*spec).js': 'coverage'
+    },
+    coverageReporter: {
+      reporters: [
+        {
+          type: 'text'
+        },
+        {
+          type: 'lcov'
+        }
+      ]
+    }
   });
 };
