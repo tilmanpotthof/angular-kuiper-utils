@@ -51,7 +51,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('pre-build', ['sync', 'deps-ok', 'nice-package']);
+  grunt.registerTask('pre-build', ['sync', 'deps-ok', 'nice-package', 'jshint', 'jscs']);
   grunt.registerTask('build', ['pre-build']);
   grunt.registerTask('default', ['build']);
 };
