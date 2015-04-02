@@ -21,9 +21,13 @@
   ],
   "description": "Loose collection reusable high quality components",
   "devDependencies": {
-    "angular-mocks": "~1.3.15"
+    "angular-mocks": "~1.3.15",
+    "stop-angular-overrides": "~0.5.0"
   },
   "dependencies": {
     "angular": "~1.3.15"
+  },
+  "resolutions": {
+    "angular": "1.3.15"
   }
 }
