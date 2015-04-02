@@ -48,10 +48,21 @@ module.exports = function(grunt) {
       options: {
         config: '.jscsrc.json'
       }
+    },
+
+    karma: {
+      src: {
+        configFile: 'karma.conf.js',
+        singleRun: true
+      }
     }
   });
 
-  grunt.registerTask('pre-build', ['sync', 'deps-ok', 'nice-package', 'jshint', 'jscs']);
+  grunt.registerTask('deps', ['sync', 'deps-ok', 'nice-package']);
+  grunt.registerTask('style', ['jshint', 'jscs']);
+  grunt.registerTask('test', ['karma:src']);
+  grunt.registerTask('pre-build', ['deps', 'style', 'test']);
+
   grunt.registerTask('build', ['pre-build']);
   grunt.registerTask('default', ['build']);
 };
