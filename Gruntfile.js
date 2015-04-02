@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
 
@@ -40,6 +40,13 @@ module.exports = function (grunt) {
         src: [
           'src/**/*.spec.js'
         ]
+      }
+    },
+
+    jscs: {
+      src: '**.js',
+      options: {
+        config: '.jscsrc.json'
       }
     }
   });
