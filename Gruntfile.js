@@ -20,7 +20,7 @@ module.exports = function(grunt) {
     jshint: {
       src: {
         options: {
-          jshintrc: '.jshintrc-base'
+          jshintrc: '.jshintrc-base.json'
         },
         src: [
           'src/**/*.js',
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
       },
       ci: {
         options: {
-          jshintrc: '.jshintrc-base'
+          jshintrc: '.jshintrc-base.json'
         },
         src: [
           '*.js'
