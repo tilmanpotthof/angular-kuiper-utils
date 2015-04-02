@@ -35,7 +35,7 @@
     "ui"
   ],
   "license": "MIT",
-  "main": "src/kuiper.js",
+  "main": "src/kuip.module.js",
   "pre-commit": [
     "grunt pre-build"
   ],
