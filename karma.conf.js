@@ -8,23 +8,21 @@ module.exports = function(config) {
     files: [
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      'src/**.js'
+      'src/**/*.module.js',
+      'src/**/*.js',
+      'src/**/*.spec.js'
     ],
     autoWatch: false,
     browsers: ['PhantomJS'],
     singleRun: true,
     reporters: ['progress', 'coverage'],
     preprocessors: {
-      'src/!(*spec).js': 'coverage'
+      'src/**/!(*spec).js': 'coverage'
     },
     coverageReporter: {
       reporters: [
-        {
-          type: 'text'
-        },
-        {
-          type: 'lcov'
-        }
+        {type: 'text'},
+        {type: 'lcov'}
       ]
     }
   });

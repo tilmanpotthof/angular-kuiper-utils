@@ -4,7 +4,6 @@
    * source: https://github.com/johnpapa/angular-styleguide#js-hint
    */
   "bitwise": true,
-  "camelcase": true,
   "curly": true,
   "eqeqeq": true,
   "es3": false,
