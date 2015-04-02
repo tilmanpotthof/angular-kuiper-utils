@@ -8,3 +8,11 @@ before_script:
   - 'bower install  --config.interactive=false'
 
 script: grunt build
+
+
+after_script:
+  - cat coverage/*/lcov.info | codeclimate
+
+addons:
+  code_climate:
+    repo_token: 95cb047f41805dada71e0bd778f88df742dd80038e5209e3519844a85a19d501
