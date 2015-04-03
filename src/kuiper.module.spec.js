@@ -1,7 +1,7 @@
-describe('kuip', function () {
+describe('kuiper', function () {
   'use strict';
 
   it('exists', function () {
-    module('kuip');
+    module('kuiper');
   });
 });

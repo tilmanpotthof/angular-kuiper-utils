@@ -1,8 +1,8 @@
 /**
  * @ngdoc overview
- * @name kuipUtils
+ * @name kuiperUtils
  *
  * @description
  * Basic services
  */
-angular.module('kuipUtils', []);
+angular.module('kuiperUtils', []);

@@ -1,9 +1,9 @@
-angular.module('kuipUtils').factory('kuipArrayUtils', function () {
+angular.module('kuiperUtils').factory('kuiperArrayUtils', function () {
   'use strict';
 
   /**
    * @ngdoc service
-   * @name kuipUtils.service:kuipArrayUtils
+   * @name kuiperUtils.service:kuiperArrayUtils
    *
    * @description
    * Util service to simplify working with arrays.
@@ -12,8 +12,8 @@ angular.module('kuipUtils').factory('kuipArrayUtils', function () {
   return {
     /**
      * @ngdoc function
-     * @name kuipUtils.service:kuipArrayUtils#inArray
-     * @methodOf kuipUtils.service:kuipArrayUtils
+     * @name kuiperUtils.service:kuiperArrayUtils#inArray
+     * @methodOf kuiperUtils.service:kuiperArrayUtils
      * @function
      *
      * @description
